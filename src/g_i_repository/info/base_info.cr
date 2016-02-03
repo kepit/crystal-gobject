@@ -7,7 +7,7 @@ module GIRepository
       INFO_TYPES[LibGIRepository::InfoType::{{@type.name[14..-5].upcase.id}}] = {{@type}}
     end
 
-    def self.wrap info
+    def self.wrap(info)
       # info = new ptr
       upper = INFO_TYPES[info.info_type]?
       if upper
@@ -85,10 +85,10 @@ module GIRepository
       "  # Bug: #{name} : #{info_type}"
     end
 
-    def wrapper_definition libname, indent=""
+    def wrapper_definition(libname, indent="")
     end
 
-    def to_s io
+    def to_s(io)
       io << name << '(' << info_type << ')'
     end
   end

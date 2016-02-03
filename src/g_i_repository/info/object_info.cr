@@ -46,7 +46,7 @@ module GIRepository
       end
     end
 
-    def wrapper_definition libname, indent=""
+    def wrapper_definition(libname, indent="")
       String.build do |io|
         parent_object = parent
         parent = parent_object.constant if parent_object && parent_object.namespace == namespace
