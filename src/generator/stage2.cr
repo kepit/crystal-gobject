@@ -10,11 +10,11 @@ end
 
 module GLib
   class Error < Exception
-    def self.assert error
+    def self.assert(error)
       raise new(error) if error
     end
 
-    def initialize gerror : LibGLib::GError*
+    def initialize(gerror : LibGLib::GError*)
       super String.new(gerror.value.message)
     end
   end
@@ -33,10 +33,10 @@ require "../g_object/wrapped_type"
 
 module GIRepository
   class BaseInfo
-    def initialize @ptr
+    def initialize(@ptr)
     end
 
-    def to_unsafe
+    def to_unsafe()
       @ptr
     end
   end
@@ -44,10 +44,10 @@ module GIRepository
   class Repository
     include GObject::WrappedType
 
-    def initialize @ptr
+    def initialize(@ptr)
     end
 
-    def to_unsafe
+    def to_unsafe()
       @ptr
     end
 
@@ -82,13 +82,13 @@ module GIRepository
       raise "Expected string but got null" unless __return_value; String.new(__return_value)
     end
 
-    def self.default
+    def self.default()
       new LibGIRepository.repository_get_default
     end
   end
 
 
-  def self.filename filename
+  def self.filename(filename)
     filename.gsub(/[A-Z][a-z]*(?=[A-Z])/) {|m| "#{m.downcase}_" }
             .gsub(/::/, "_")
             .downcase
