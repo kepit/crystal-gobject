@@ -2,7 +2,7 @@ require "./container"
 
 module Gtk
   class Grid < Container
-    def initialize @gtk_grid
+    def initialize(@gtk_grid)
     end
 
     def to_unsafe

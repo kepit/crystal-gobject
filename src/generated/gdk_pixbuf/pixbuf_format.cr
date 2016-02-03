@@ -2,7 +2,7 @@ module GdkPixbuf
   class PixbufFormat
     include GObject::WrappedType
 
-    def initialize @gdk_pixbuf_pixbuf_format
+    def initialize(@gdk_pixbuf_pixbuf_format)
     end
 
     def to_unsafe

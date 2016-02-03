@@ -2,7 +2,7 @@ require "./object"
 
 module Gst
   class ControlSource < Object
-    def initialize @gst_control_source
+    def initialize(@gst_control_source)
     end
 
     def to_unsafe

@@ -2,7 +2,7 @@ module GLib
   class Regex
     include GObject::WrappedType
 
-    def initialize @g_lib_regex
+    def initialize(@g_lib_regex)
     end
 
     def to_unsafe

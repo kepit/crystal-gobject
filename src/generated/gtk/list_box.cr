@@ -2,7 +2,7 @@ require "./container"
 
 module Gtk
   class ListBox < Container
-    def initialize @gtk_list_box
+    def initialize(@gtk_list_box)
     end
 
     def to_unsafe

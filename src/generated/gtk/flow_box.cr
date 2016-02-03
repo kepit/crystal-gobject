@@ -2,7 +2,7 @@ require "./container"
 
 module Gtk
   class FlowBox < Container
-    def initialize @gtk_flow_box
+    def initialize(@gtk_flow_box)
     end
 
     def to_unsafe

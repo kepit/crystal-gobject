@@ -2,7 +2,7 @@ require "./filter_input_stream"
 
 module Gio
   class BufferedInputStream < FilterInputStream
-    def initialize @gio_buffered_input_stream
+    def initialize(@gio_buffered_input_stream)
     end
 
     def to_unsafe

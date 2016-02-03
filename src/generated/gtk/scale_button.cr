@@ -2,7 +2,7 @@ require "./button"
 
 module Gtk
   class ScaleButton < Button
-    def initialize @gtk_scale_button
+    def initialize(@gtk_scale_button)
     end
 
     def to_unsafe

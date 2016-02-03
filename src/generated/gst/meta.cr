@@ -2,7 +2,7 @@ module Gst
   class Meta
     include GObject::WrappedType
 
-    def initialize @gst_meta
+    def initialize(@gst_meta)
     end
 
     def to_unsafe

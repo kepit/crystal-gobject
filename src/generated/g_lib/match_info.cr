@@ -2,7 +2,7 @@ module GLib
   class MatchInfo
     include GObject::WrappedType
 
-    def initialize @g_lib_match_info
+    def initialize(@g_lib_match_info)
     end
 
     def to_unsafe

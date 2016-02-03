@@ -1,6 +1,6 @@
 module Gio
   class DBusObjectManagerClient < GObject::Object
-    def initialize @gio_d_bus_object_manager_client
+    def initialize(@gio_d_bus_object_manager_client)
     end
 
     def to_unsafe

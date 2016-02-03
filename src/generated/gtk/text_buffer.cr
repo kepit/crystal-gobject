@@ -1,6 +1,6 @@
 module Gtk
   class TextBuffer < GObject::Object
-    def initialize @gtk_text_buffer
+    def initialize(@gtk_text_buffer)
     end
 
     def to_unsafe

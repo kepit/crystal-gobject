@@ -1,6 +1,6 @@
 module Gio
   class IOModule < GObject::TypeModule
-    def initialize @gio_i_o_module
+    def initialize(@gio_i_o_module)
     end
 
     def to_unsafe

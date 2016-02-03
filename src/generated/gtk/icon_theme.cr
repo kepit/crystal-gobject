@@ -1,6 +1,6 @@
 module Gtk
   class IconTheme < GObject::Object
-    def initialize @gtk_icon_theme
+    def initialize(@gtk_icon_theme)
     end
 
     def to_unsafe

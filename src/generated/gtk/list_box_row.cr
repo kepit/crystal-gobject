@@ -2,7 +2,7 @@ require "./bin"
 
 module Gtk
   class ListBoxRow < Bin
-    def initialize @gtk_list_box_row
+    def initialize(@gtk_list_box_row)
     end
 
     def to_unsafe

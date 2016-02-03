@@ -2,7 +2,7 @@ module Gtk
   class TreePath
     include GObject::WrappedType
 
-    def initialize @gtk_tree_path
+    def initialize(@gtk_tree_path)
     end
 
     def to_unsafe

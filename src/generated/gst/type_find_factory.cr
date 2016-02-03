@@ -2,7 +2,7 @@ require "./plugin_feature"
 
 module Gst
   class TypeFindFactory < PluginFeature
-    def initialize @gst_type_find_factory
+    def initialize(@gst_type_find_factory)
     end
 
     def to_unsafe

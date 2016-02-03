@@ -2,7 +2,7 @@ require "./plugin_feature"
 
 module Gst
   class ElementFactory < PluginFeature
-    def initialize @gst_element_factory
+    def initialize(@gst_element_factory)
     end
 
     def to_unsafe

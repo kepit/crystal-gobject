@@ -1,6 +1,6 @@
 module Gtk
   class Widget < GObject::InitiallyUnowned
-    def initialize @gtk_widget
+    def initialize(@gtk_widget)
     end
 
     def to_unsafe

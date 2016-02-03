@@ -2,7 +2,7 @@ require "./object"
 
 module Gst
   class BufferPool < Object
-    def initialize @gst_buffer_pool
+    def initialize(@gst_buffer_pool)
     end
 
     def to_unsafe

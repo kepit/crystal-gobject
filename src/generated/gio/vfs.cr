@@ -1,6 +1,6 @@
 module Gio
   class Vfs < GObject::Object
-    def initialize @gio_vfs
+    def initialize(@gio_vfs)
     end
 
     def to_unsafe

@@ -1,6 +1,6 @@
 module Gio
   class MountOperation < GObject::Object
-    def initialize @gio_mount_operation
+    def initialize(@gio_mount_operation)
     end
 
     def to_unsafe

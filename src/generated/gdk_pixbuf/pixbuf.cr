@@ -1,6 +1,6 @@
 module GdkPixbuf
   class Pixbuf < GObject::Object
-    def initialize @gdk_pixbuf_pixbuf
+    def initialize(@gdk_pixbuf_pixbuf)
     end
 
     def to_unsafe

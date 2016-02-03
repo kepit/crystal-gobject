@@ -1,6 +1,6 @@
 module Gtk
   class PrintSettings < GObject::Object
-    def initialize @gtk_print_settings
+    def initialize(@gtk_print_settings)
     end
 
     def to_unsafe

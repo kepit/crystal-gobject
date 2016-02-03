@@ -2,7 +2,7 @@ module Gst
   class ParseContext
     include GObject::WrappedType
 
-    def initialize @gst_parse_context
+    def initialize(@gst_parse_context)
     end
 
     def to_unsafe

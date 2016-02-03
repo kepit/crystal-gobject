@@ -2,7 +2,7 @@ module GLib
   class Bytes
     include GObject::WrappedType
 
-    def initialize @g_lib_bytes
+    def initialize(@g_lib_bytes)
     end
 
     def to_unsafe

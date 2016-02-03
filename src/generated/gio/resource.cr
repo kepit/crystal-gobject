@@ -2,7 +2,7 @@ module Gio
   class Resource
     include GObject::WrappedType
 
-    def initialize @gio_resource
+    def initialize(@gio_resource)
     end
 
     def to_unsafe
