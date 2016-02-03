@@ -1,14 +1,14 @@
 class PointerIterator(T, V)
   include Enumerable(V)
 
-  def self.string_array array : UInt8**
+  def self.string_array(array : UInt8**)
     new(array) {|string| String.new(string) }.to_a
   end
 
-  def initialize @array : T*, &@converter : T -> V
+  def initialize(@array : T*, &@converter : T -> V)
   end
 
-  def each
+  def each()
     return unless @array
     i = 0
     loop do
@@ -21,7 +21,7 @@ class PointerIterator(T, V)
 end
 
 class String
-  def constant
+  def constant()
     return self if 'A' <= self[0] <= 'Z'
     "#{self[0].upcase}#{self[1..-1]}"
   end
@@ -29,33 +29,33 @@ end
 
 
 class ClosureDataManager
-  def self.instance
+  def self.instance()
     @@instance ||= new
   end
 
-  def self.deregister data
+  def self.deregister(data)
     instance.deregister data
   end
 
-  def self.deregister data, _closure
+  def self.deregister(data, _closure)
     instance.deregister data
   end
 
-  def self.register data
+  def self.register(data)
     instance.register data
     data
   end
 
-  private def initialize
+  private def initialize()
     @closure_data = Hash(Void*, Int32).new {|h, k| h[k] = 0 }
   end
 
-  def register data
+  def register(data)
     @closure_data[data] += 1
     data
   end
 
-  def deregister data
+  def deregister(data)
     @closure_data[data] -= 1
     if @closure_data[data] <= 0
       @closure_data.delete data
