@@ -12,7 +12,7 @@ module GLib
     )
   end
 
-  def self.timeout seconds, &block : -> Bool
+  def self.timeout(seconds, &block : -> Bool)
     LibGLib.timeout_add_seconds(
       LibGLib::PRIORITY_DEFAULT_IDLE,
       UInt32.new(seconds),

@@ -1,6 +1,6 @@
 module GLib
   class Error #< Exception
-    def self.assert error
+    def self.assert(error)
       raise Exception.new(::String.new(error.value.message)) if error
     end
 
